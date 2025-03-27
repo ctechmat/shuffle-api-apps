@@ -1,0 +1,2014 @@
+openapi: 3.0.0
+info:
+  title: GitLab_v4
+  description: Gitlab with api v4 specifications
+  version: "1.0"
+  x-logo: data:image/png;base64,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
+  contact:
+    name: "@Anonymous Shuffle User"
+    url: https://twitter.com/shuffleio
+    email: support@shuffler.io
+servers:
+  - url: https://gitlab.com
+host: gitlab.com
+basePath: /
+schemes:
+  - "https:"
+paths:
+  "/api/v4/projects/{id}/repository/archive":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get an archive of the repository
+      operationId: Get_an_archive_of_the_repository
+      description: Get an archive of the repository
+      parameters:
+        - in: query
+          name: sha
+          description: The commit sha of the archive to be downloaded
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: format
+          description: The archive format
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: path
+          description: Subfolder of the repository to be downloaded
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: include_lfs_blobs
+          description: Used to exclude LFS objects from archive
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: exclude_paths
+          description: Comma-separated list of paths to exclude from the archive
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/blobs/{sha}":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a blob from the repository
+      operationId: Get_a_blob_from_the_repository
+      description: Get a blob from the repository
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/blobs/{sha}/raw":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get raw blob contents from the repository
+      operationId: Get_raw_blob_contents_from_the_repository
+      description: Get raw blob contents from the repository
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/branches":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a project repository branches
+      operationId: Get_a_project_repository_branches
+      description: Get a project repository branches
+      parameters:
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: search
+          description: Return list of branches matching the search criteria
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: regex
+          description: Return list of branches matching the regex
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: sort
+          description: Return list of branches sorted by the given field
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page_token
+          description: Name of branch to start the pagination from
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Create branch
+      operationId: Create_branch
+      description: Create branch
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/branches/{branch}":
+    delete:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Delete a branch
+      operationId: Delete_a_branch
+      description: Delete a branch
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: branch
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a single repository branch
+      operationId: Get_a_single_repository_branch
+      description: Get a single repository branch
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: branch
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    head:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Check if a branch exists
+      operationId: Check_if_a_branch_exists
+      description: Check if a branch exists
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: branch
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/branches/{branch}/protect":
+    put:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Protect a single branch
+      operationId: Protect_a_single_branch
+      description: Protect a single branch
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: branch
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/branches/{branch}/unprotect":
+    put:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Unprotect a single branch
+      operationId: Unprotect_a_single_branch
+      description: Unprotect a single branch
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: branch
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/changelog":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Generates a changelog section for a release and returns it
+      operationId: Generates_a_changelog_section_for_a_release_and_returns_it
+      description: This feature was introduced in GitLab 14.6
+      parameters:
+        - in: query
+          name: version
+          description: The version of the release, using the semantic versioning format
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: from
+          description: The first commit in the range of commits to use for the changelog
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: to
+          description: The last commit in the range of commits to use for the changelog
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: date
+          description: The date and time of the release
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: trailer
+          description: The Git trailer to use for determining if commits are to be
+            included in the changelog
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: config_file
+          description: The file path to the configuration file as stored in the project's
+            Git repository. Defaults to '.gitlab/changelog_config.yml'
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Generates a changelog section for a release and commits it in a
+        changelog file
+      operationId: Generates_a_changelog_section_for_a_release_and_commits_it_in_a_changelog_file
+      description: This feature was introduced in GitLab 13.9
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/commits":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a project repository commits
+      operationId: Get_a_project_repository_commits
+      description: Get a project repository commits
+      parameters:
+        - in: query
+          name: ref_name
+          description: The name of a repository branch or tag, if not given the default
+            branch is used
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: since
+          description: Only commits after or on this date will be returned
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: until
+          description: Only commits before or on this date will be returned
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: path
+          description: The file path
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: author
+          description: Search commits by commit author
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: all
+          description: Every commit will be returned
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: with_stats
+          description: Stats about each commit will be added to the response
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: first_parent
+          description: Only include the first parent of merges
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: order
+          description: List commits in order
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: trailers
+          description: Parse and include Git trailers for every commit
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Commit multiple file changes as one commit
+      operationId: Commit_multiple_file_changes_as_one_commit
+      description: This feature was introduced in GitLab 8.13
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/commits/{sha}":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a specific commit of a project
+      operationId: Get_a_specific_commit_of_a_project
+      description: Get a specific commit of a project
+      parameters:
+        - in: query
+          name: stats
+          description: Include commit stats
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/commits/{sha}/cherry_pick":
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Cherry pick commit into a branch
+      operationId: Cherry_pick_commit_into_a_branch
+      description: This feature was introduced in GitLab 8.15
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/commits/{sha}/comments":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a commits comments
+      operationId: Get_a_commits_comments
+      description: Get a commit's comments
+      parameters:
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Post comment to commit
+      operationId: Post_comment_to_commit
+      description: Post comment to commit
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/commits/{sha}/diff":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get the diff for a specific commit of a project
+      operationId: Get_the_diff_for_a_specific_commit_of_a_project
+      description: Get the diff for a specific commit of a project
+      parameters:
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: unidiff
+          description: A diff in a Unified diff format
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/commits/{sha}/merge_requests":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get Merge Requests associated with a commit
+      operationId: Get_Merge_Requests_associated_with_a_commit
+      description: Get Merge Requests associated with a commit
+      parameters:
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/commits/{sha}/refs":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get all references a commit is pushed to
+      operationId: Get_all_references_a_commit_is_pushed_to
+      description: This feature was introduced in GitLab 10.6
+      parameters:
+        - in: query
+          name: type
+          description: Scope
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/commits/{sha}/revert":
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Revert a commit in a branch
+      operationId: Revert_a_commit_in_a_branch
+      description: This feature was introduced in GitLab 11.5
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/commits/{sha}/sequence":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get the sequence count of a commit SHA
+      operationId: Get_the_sequence_count_of_a_commit_SHA
+      description: Get the sequence count of a commit SHA
+      parameters:
+        - in: query
+          name: first_parent
+          description: Only include the first parent of merges
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/commits/{sha}/signature":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a commits signature
+      operationId: Get_a_commits_signature
+      description: Get a commit's signature
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/commits/{sha}/statuses":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a commits statuses
+      operationId: Get_a_commits_statuses
+      description: Get a commit's statuses
+      parameters:
+        - in: query
+          name: ref
+          description: Name of the branch or tag. Default is the default branch.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: stage
+          description: Filter statuses by build stage.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: name
+          description: Filter statuses by job name.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: pipeline_id
+          description: Filter statuses by pipeline ID.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: all
+          description: Include all statuses instead of latest only. Default is `false`.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: order_by
+          description: Values for sorting statuses. Valid values are `id` and
+            `pipeline_id`. Default is `id`.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: sort
+          description: Sort statuses in ascending or descending order. Valid values are
+            `asc` and `desc`. Default is `asc`.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: sha
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/compare":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Compare two branches tags or commits
+      operationId: Compare_two_branches_tags_or_commits
+      description: Compare two branches, tags, or commits
+      parameters:
+        - in: query
+          name: from
+          description: The commit, branch name, or tag name to start comparison
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: to
+          description: The commit, branch name, or tag name to stop comparison
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: from_project_id
+          description: The project to compare from
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: straight
+          description: Comparison method, `true` for direct comparison between `from` and
+            `to` (`from`..`to`), `false` to compare using merge base
+            (`from`...`to`)
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: unidiff
+          description: A diff in a Unified diff format
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/contributors":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get repository contributors
+      operationId: Get_repository_contributors
+      description: Get repository contributors
+      parameters:
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: ref
+          description: The name of a repository branch or tag, if not given the default
+            branch is used
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: order_by
+          description: Return contributors ordered by `name` or `email` or `commits`
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: sort
+          description: Sort by asc (ascending) or desc (descending)
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/files/{file_path}":
+    delete:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Delete an existing file in repository
+      operationId: Delete_an_existing_file_in_repository
+      description: Delete an existing file in repository
+      parameters:
+        - in: query
+          name: branch
+          description: Name of the branch to commit into. To create a new branch, also
+            provide `start_branch`.
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: commit_message
+          description: Commit message
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: start_branch
+          description: Name of the branch to start the new commit from
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: author_email
+          description: The email of the author
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: author_name
+          description: The name of the author
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a file from the repository
+      operationId: Get_a_file_from_the_repository
+      description: Get a file from the repository
+      parameters:
+        - in: query
+          name: ref
+          description: The name of branch, tag or commit
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    head:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get file metadata from repository
+      operationId: Get_file_metadata_from_repository
+      description: Get file metadata from repository
+      parameters:
+        - in: query
+          name: ref
+          description: The name of branch, tag or commit
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Create new file in repository
+      operationId: Create_new_file_in_repository
+      description: Create new file in repository
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+    put:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Update existing file in repository
+      operationId: Update_existing_file_in_repository
+      description: Update existing file in repository
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/files/{file_path}/blame":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get blame file from the repository
+      operationId: Get_blame_file_from_the_repository
+      description: Get blame file from the repository
+      parameters:
+        - in: query
+          name: ref
+          description: The name of branch, tag or commit
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: range[start]
+          description: The first line of the range to blame
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: range[end]
+          description: The last line of the range to blame
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    head:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get blame file metadata from repository
+      operationId: Get_blame_file_metadata_from_repository
+      description: Get blame file metadata from repository
+      parameters:
+        - in: query
+          name: ref
+          description: The name of branch, tag or commit
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/files/{file_path}/raw":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get raw file contents from the repository
+      operationId: Get_raw_file_contents_from_the_repository
+      description: Get raw file contents from the repository
+      parameters:
+        - in: query
+          name: ref
+          description: The name of branch, tag or commit
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: lfs
+          description: Retrieve binary data for a file that is an lfs pointer
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: file_path
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/merge_base":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get the common ancestor between commits
+      operationId: Get_the_common_ancestor_between_commits
+      description: Get the common ancestor between commits
+      parameters:
+        - in: query
+          name: refs
+          description: The refs to find the common ancestor of, multiple refs can be passed
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/merged_branches":
+    delete:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Delete all merged branches
+      operationId: Delete_all_merged_branches
+      description: Delete all merged branches
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/submodules/{submodule}":
+    put:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Update existing submodule reference in repository
+      operationId: Update_existing_submodule_reference_in_repository
+      description: Update existing submodule reference in repository
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: submodule
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/tags":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a project repository tags
+      operationId: Get_a_project_repository_tags
+      description: Get a project repository tags
+      parameters:
+        - in: query
+          name: sort
+          description: Return tags sorted in updated by `asc` or `desc` order.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: order_by
+          description: Return tags ordered by `name`, `updated`, `version` fields.
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: search
+          description: Return list of tags matching the search criteria
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page_token
+          description: Name of tag to start the paginaition from
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Create a new repository tag
+      operationId: Create_a_new_repository_tag
+      description: Create a new repository tag
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository/tags/{tag_name}":
+    delete:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Delete a repository tag
+      operationId: Delete_a_repository_tag
+      description: Delete a repository tag
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: tag_name
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a single repository tag
+      operationId: Get_a_single_repository_tag
+      description: Get a single repository tag
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: tag_name
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/tags/{tag_name}/signature":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a tags signature
+      operationId: Get_a_tags_signature
+      description: Get a tag's signature
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: tag_name
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository/tree":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a project repository tree
+      operationId: Get_a_project_repository_tree
+      description: Get a project repository tree
+      parameters:
+        - in: query
+          name: ref
+          description: The name of a repository branch or tag, if not given the default
+            branch is used
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: path
+          description: The path of the tree
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: recursive
+          description: Used to get a recursive tree
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: pagination
+          description: Specify the pagination method ("none" is only valid if "recursive"
+            is true)
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page_token
+          description: Record from which to start the keyset pagination
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  "/api/v4/projects/{id}/repository_size":
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Start a task to recalculate repository size for a project
+      operationId: Start_a_task_to_recalculate_repository_size_for_a_project
+      description: This feature was introduced in GitLab 15.0.
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository_storage_moves":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a list of all project repository storage moves
+      operationId: Get_a_list_of_all_project_repository_storage_moves
+      description: This feature was introduced in GitLab 13.1.
+      parameters:
+        - in: query
+          name: page
+          description: Current page number
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: per_page
+          description: Number of items per page
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Schedule a project repository storage move
+      operationId: Schedule_a_project_repository_storage_move
+      description: This feature was introduced in GitLab 13.1.
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: ""
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: ""
+  "/api/v4/projects/{id}/repository_storage_moves/{repository_storage_move_id}":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get a project repository storage move
+      operationId: Get_a_project_repository_storage_move
+      description: This feature was introduced in GitLab 13.1.
+      parameters:
+        - in: path
+          name: id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: repository_storage_move_id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: PRIVATE-TOKEN
+      description: ""
