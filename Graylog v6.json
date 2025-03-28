@@ -1,0 +1,346 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Graylog v6",
+        "description": "Graylog with api v6 specification",
+        "version": "1.0",
+        "x-logo": "data:image/png;base64,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",
+        "contact": {
+            "email": "support@shuffler.io",
+            "name": "@Anonymous Shuffle User",
+            "url": "https://twitter.com/shuffleio"
+        },
+        "x-categories": [
+            "SIEM"
+        ]
+    },
+    "servers": [
+        {
+            "url": "https://graylog.com:9000"
+        }
+    ],
+    "host": "graylog.com:9000",
+    "basePath": "/",
+    "schemes": [
+        "https:"
+    ],
+    "paths": {
+        "/api/events/definitions": {
+            "get": {
+                "responses": {
+                    "default": {
+                        "description": "default",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Event List event definitions",
+                "operationId": "Event_List_event_definitions",
+                "description": "List event definitions",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "page",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "1"
+                    },
+                    {
+                        "in": "query",
+                        "name": "per_page",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "50"
+                    },
+                    {
+                        "in": "header",
+                        "name": "Content-Type",
+                        "multiline": false,
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": "application/json",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {}
+                }
+            },
+            "post": {
+                "responses": {
+                    "default": {
+                        "description": "default",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Event Create event definitions",
+                "operationId": "Event_Create_event_definitions",
+                "description": "Create event definitions",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "schedule",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "true"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "multiline": true,
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"priority\": \"integer\",\n  \"config\": {\n    \"query\": \"string\",\n    \"query_parameters\": [],\n    \"streams\": [\"integer\"],\n    \"stream_categories\": [],\n    \"filters\": [],\n    \"search_within_ms\": \"integer\",\n    \"execute_every_ms\": \"integer\",\n    \"event_limit\": \"integer\",\n    \"use_cron_scheduling\": \"booleen\",\n    \"group_by\": [],\n    \"series\": [],\n    \"conditions\": {},\n    \"type\": \"string\"\n  },\n  \"field_spec\": {},\n  \"key_spec\": [],\n  \"notification_settings\": {\n    \"grace_period_ms\": \"integer\",\n    \"backlog_size\": \"integer\"\n  },\n  \"notifications\": [],\n  \"alert\": false\n}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "header",
+                        "name": "Content-Type",
+                        "multiline": false,
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": "application/json",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Generated by Shuffler.io",
+                    "required": false,
+                    "content": {
+                        "example": {
+                            "example": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"priority\": \"integer\",\n  \"config\": {\n    \"query\": \"string\",\n    \"query_parameters\": [],\n    \"streams\": [\"integer\"],\n    \"stream_categories\": [],\n    \"filters\": [],\n    \"search_within_ms\": \"integer\",\n    \"execute_every_ms\": \"integer\",\n    \"event_limit\": \"integer\",\n    \"use_cron_scheduling\": \"booleen\",\n    \"group_by\": [],\n    \"series\": [],\n    \"conditions\": {},\n    \"type\": \"string\"\n  },\n  \"field_spec\": {},\n  \"key_spec\": [],\n  \"notification_settings\": {\n    \"grace_period_ms\": \"integer\",\n    \"backlog_size\": \"integer\"\n  },\n  \"notifications\": [],\n  \"alert\": false\n}"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/events/definitions/{definition_id}": {
+            "get": {
+                "responses": {
+                    "default": {
+                        "description": "default",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Event Get an event definition",
+                "operationId": "Event_Get_an_event_definition",
+                "description": "Get an event definition",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "definition_id",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "header",
+                        "name": "Content-Type",
+                        "multiline": false,
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": ": application/json",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {}
+                }
+            },
+            "put": {
+                "responses": {
+                    "default": {
+                        "description": "default",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Event Update existing event definition",
+                "operationId": "Event_Update_existing_event_definition",
+                "description": "Update existing event definition",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "schedule",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "true"
+                    },
+                    {
+                        "in": "path",
+                        "name": "definition_id",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "multiline": true,
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "header",
+                        "name": "Content-Type",
+                        "multiline": false,
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": "application/json",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Generated by Shuffler.io",
+                    "required": false,
+                    "content": {
+                        "example": {
+                            "example": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/universal/relative": {
+            "get": {
+                "responses": {
+                    "default": {
+                        "description": "default",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Message search with relative timerange",
+                "operationId": "Message_search_with_relative_timerange",
+                "description": "Message search with relative timerange",
+                "parameters": [],
+                "requestBody": {
+                    "content": {}
+                }
+            }
+        },
+        "/events/definitions/{definitionId}": {
+            "delete": {
+                "responses": {
+                    "default": {
+                        "description": "default",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Delete event definition",
+                "operationId": "Delete_event_definition",
+                "description": "Delete event definition",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "definitionId",
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "multiline": true,
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "required": false,
+                        "example": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Generated by Shuffler.io",
+                    "required": false,
+                    "content": {
+                        "example": {
+                            "example": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "editing": true,
+    "components": {
+        "securitySchemes": {
+            "BasicAuth": {
+                "type": "http",
+                "scheme": "basic"
+            }
+        }
+    },
+    "id": "1b5693f7a649549b5b876ec9948a523b"
+}
